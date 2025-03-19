@@ -1,133 +1,210 @@
 @font-face {
-    font-family: "Retro";
-    src: url("Street\ Cred.otf");
+  font-family: "Retro";
+  src: url("Street Cred.otf");
 }
 
 @font-face {
-    font-family: "American";
-    src: url("American\ Captain.ttf");
+  font-family: "American";
+  src: url("American Captain.ttf");
 }
 
-body{
-    font-family: "American";
-    background-image: url("lightBG.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
+@font-face {
+  font-family: "Retro";
+  src: url("Street\ Cred.otf");
 }
 
-.wrapper{
-    height: 100vh;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(256, 256, 256, 0.6);
-    border-radius: 20px;
-    padding: 1rem
+@font-face {
+  font-family: "American";
+  src: url("American\ Captain.ttf");
 }
 
-#countdown{
-    margin-top: 0.8rem;
-    font-size: 4rem;
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "American";
+  background-image: url("lightBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
 }
 
-.numberOfSeconds{
-    padding:  0.25rem 0.75rem;
-    background-color: rgb(29, 28, 28);
-    color: white;
-    border-radius: 20px;
-    border: none;
-    margin-top: 1rem;
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(256, 256, 256, 0.6);
+  border-radius: 20px;
+  padding: 1rem;
 }
 
-.buttons{
-    margin-top: 0.5rem;
-}
-.title{
-    font-family: "Retro";
-    font-size: 3rem;
+
+#countdown {
+  margin-top: 0.8rem;
+  font-size: 4rem;
 }
 
-button{
-    border-radius: 20px;
-    background-color: rgb(29, 28, 28);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border: none;
-    cursor: pointer;
+.numberOfSeconds {
+  padding: 0.25rem 0.75rem;
+  background-color: rgb(29, 28, 28);
+  color: white;
+  border-radius: 20px;
+  border: none;
+  margin-top: 1rem;
+}
+
+.buttons {
+  margin-top: 0.5rem;
+}
+
+.title {
+  font-family: "Retro";
+  font-size: 3rem;
+}
+
+button {
+  border-radius: 20px;
+  background-color: rgb(29, 28, 28);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  cursor: pointer;
+  margin: 0.2rem;
 }
 
 .toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 24px;
-    margin-top: 0.5rem
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-top: 0.5rem
 }
 
 .toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    background-color: #ccc;
-    border-radius: 24px;
-    width: 100%;
-    height: 100%;
-    transition: background-color 0.3s;
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
 }
 
 .slider::before {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 2px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
 }
 
-.toggle-switch input:checked+.slider {
-    background-color: #9c2ecf;
+.toggle-switch input:checked + .slider {
+  background-color: #9c2ecf;
 }
 
-.toggle-switch input:checked+.slider::before {
-    transform: translateX(22px);
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(22px);
 }
 
 @keyframes flashingYellow {
-  0%, 100% {
-    background-color: rgba(255, 255, 0, 0.6);;
-  }
-  50% {
-    background-color: rgba(178, 165, 0, 0.6);
-  }
+0%, 100% {
+  background-color: rgba(255, 255, 0, 0.6);
+}
+50% {
+  background-color: rgba(178, 165, 0, 0.6);
+}
+}
+
+h2{
+  font-weight: normal;
 }
 
 @keyframes flashingRed {
-  0%, 100% {
-    background-color: rgba(255, 0, 0, 0.6);;
-  }
-  50% {
-    background-color: rgba(139, 0, 0, 0.6);
-  }
+0%, 100% {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+50% {
+  background-color: rgba(139, 0, 0, 0.6);
+}
 }
 
 .flashing-yellow {
-  animation: flashingYellow 0.8s infinite;
+animation: flashingYellow 0.8s infinite;
 }
 
 .flashing-red {
-  animation: flashingRed 0.3s infinite;
+animation: flashingRed 0.3s infinite;
 }
 
-  
+.gallery {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.thumb {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 10px;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+
+.thumb:hover {
+transform: scale(1.1);
+}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 999;
+padding-top: 60px;
+left: 0;
+top: 0;
+width: 100vw;
+height: 100vh;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+display: block;
+margin: auto;
+width: 60%;
+
+}
+
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: white;
+font-size: 30px;
+font-weight: bold;
+cursor: pointer;
+}
+
+table {
+width: 100%;
+margin-top: 1rem;
+border-collapse: collapse;
+}
+
+th, td {
+padding: 0.5rem;
+text-align: center;
+}

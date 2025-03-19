@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,57 @@
     <div class="wrapper">
         <div class="title">The COUNTDOWN MACHINE</div>
         <div id="countdown">00:00</div>
-        <input class="numberOfSeconds">
+        <input class="numberOfSeconds" placeholder="Enter seconds">
         <div class="buttons">
             <button id="start">Start</button>
             <button id="stop">Stop</button>
             <button id="reset">Reset</button>
         </div>
-        <label class="toggle-switch">
-            <input type="checkbox" class="toggleInp" />
-            <span class="slider"></span>
-        </label>
+        <div>
+            Change Mode
+            <label class="toggle-switch">
+                <input type="checkbox" class="toggleInp" />
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+        <h2 class="title">List Machine</h2>
+        <input class="numberOfSeconds" type="text" id="listInput" placeholder="Add to list">
+        <div class="buttons">
+            <button onclick="addToList()">Add</button>
+            <button onclick="sortList()">Sort</button>
+            <button onclick="reverseList()">Reverse</button>
+            <button onclick="removeDuplicates()">Remove Duplicates</button>
+        </div>
+        <ul id="dataList"></ul>
+
+        <h2 class="title">DATA TABLE</h2>
+        <input  class="numberOfSeconds" type="text" id="tableName" placeholder="Name">
+        <input class="numberOfSeconds" type="text" id="tableAge" placeholder="Age">
+        <button class="buttons" onclick="addRow()">Add Row</button>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <h2 class="title">IMAGE GALLERY</h2>
+        <div class="gallery">
+            <img src="pic1.jpg" class="thumb" onclick="openModal(this.src)">
+            <img src="pic2.jpg" class="thumb" onclick="openModal(this.src)">
+            <img src="pic3.jpg" class="thumb" onclick="openModal(this.src)">
+        </div>
+
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
